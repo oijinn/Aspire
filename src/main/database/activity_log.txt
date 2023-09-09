@@ -1,0 +1,9 @@
+0,ma000001,admin@gmail.com,admin,18/02/2022,17:54:19,sign in
+1,ma000001,admin@gmail.com,admin,18/02/2022,17:55:24,sign up account for cu000001
+2,ma000001,admin@gmail.com,admin,18/02/2022,17:57:25,sign up account for te000001
+3,ma000001,admin@gmail.com,admin,18/02/2022,17:58:02,book appointment ap000001
+4,ma000001,admin@gmail.com,admin,18/02/2022,18:06:19,generate report february report (2022)
+5,ma000001,admin@gmail.com,admin,18/02/2022,18:06:33,generate report march report (2022)
+6,ma000001,admin@gmail.com,admin,18/02/2022,18:06:51,sign out
+7,te000001,shengkit@gmail.com,yeap sheng kit,18/02/2022,18:07:28,sign in
+8,te000001,shengkit@gmail.com,yeap sheng kit,18/02/2022,18:10:03,sign out

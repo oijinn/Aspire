@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #433F3F;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oodj.Manager_management_customer_details">
+   <children>
+      <Button fx:id="btn_open_menu" layoutX="23.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#btn_open_menu_clicked" prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: #363636; -fx-background-radius: 50;" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <graphic>
+            <ImageView fx:id="img_expand_menu" fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/hamburger_white.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="1.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane layoutX="717.0" layoutY="325.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <Label layoutY="135.0" text="ID:" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="135.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_update" layoutY="554.0" mnemonicParsing="false" onMouseClicked="#btn_update_clicked" prefHeight="54.0" prefWidth="384.0" style="-fx-background-color: #FF6D1B; -fx-background-radius: 30;" text="Update" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="554.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="lbl_customer_name" layoutX="1.0" prefHeight="42.0" prefWidth="513.0" text="This is username" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutY="81.0" text="Personal Information" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="73.0">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="314.0" text="Account Information" textFill="WHITE" AnchorPane.topAnchor="314.0">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutY="185.0" text="No. Identity Card:" textFill="WHITE" AnchorPane.leftAnchor="0.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="243.0" text="Phone Number:" textFill="WHITE" AnchorPane.leftAnchor="1.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_customer_phone_number" layoutX="163.0" layoutY="234.0" prefHeight="40.0" prefWidth="220.0">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1.0" layoutY="376.0" text="Email Address:" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_error_phone_number" layoutX="163.0" layoutY="282.0" prefHeight="16.0" prefWidth="220.0" text="**Invalid phone number" textFill="#ff4040" visible="false">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="562.0" layoutY="73.0" text="Appointment" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="table" layoutX="561.0" layoutY="343.0" prefHeight="496.0" prefWidth="624.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="column_id" prefWidth="89.0" text="ID" />
+                  <TableColumn fx:id="column_title" prefWidth="333.0" text="Title" />
+                  <TableColumn fx:id="column_date" prefWidth="107.0" text="Date" />
+                  <TableColumn fx:id="column_status" prefWidth="94.0" text="Status" />
+               </columns>
+            </TableView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="906.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/search_grey.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txt_search" layoutX="938.0" layoutY="73.0" prefHeight="27.0" prefWidth="248.0" promptText="Search" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="lbl_customer_id" layoutX="163.0" layoutY="135.0" text="MA000000" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_customer_ic" layoutX="163.0" layoutY="185.0" text="000000000000" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_error_internet" layoutY="525.0" prefHeight="16.0" prefWidth="384.0" text="**Internet connection problem, please try again" textFill="#ff4040" visible="false">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_customer_email_address" layoutX="162.0" layoutY="367.0" prefHeight="40.0" prefWidth="220.0">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </TextField>
+            <Label fx:id="lbl_error_email_address" layoutX="162.0" layoutY="413.0" prefHeight="16.0" prefWidth="220.0" text="**Invalid email address" textFill="#ff4040" visible="false">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panel_menu" layoutY="80.0" prefHeight="409.0" prefWidth="258.0" style="-fx-background-color: #2F2F2F; -fx-background-radius: 0 10 10 0;" translateX="-260.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="86.0">
+         <children>
+            <Button fx:id="btn_menu_appointment" layoutX="-1.0" layoutY="161.0" mnemonicParsing="false" onMouseClicked="#btn_menu_appointment_clicked" prefHeight="54.0" style="-fx-background-color: none;" text="Appointment" textFill="#878787" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="161.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_menu_management" layoutX="-1.0" layoutY="236.0" mnemonicParsing="false" onMouseClicked="#btn_menu_management_clicked" prefHeight="54.0" style="-fx-background-color: none;" text="Management" textFill="#878787" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_menu_sign_out" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#btn_menu_sign_out_clicked" prefHeight="54.0" style="-fx-background-color: none;" text="Sign out" textFill="#878787" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_menu_profile" layoutX="80.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#btn_menu_profile_clicked" prefHeight="27.0" prefWidth="57.0" style="-fx-background-color: none;" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="40.0">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="95.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/guest_profile.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
